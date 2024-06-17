@@ -107,12 +107,12 @@ async def detect_accident(frame, camera_id):
         cv2.putText(frame, pred + " " + str(prob), (10, 15), font, 0.5, (255, 255, 0), 2)
         current_time = time.time()
         notification_sent = False
-        if prob > 99.50 and (time.time() - last_message_time) > 480:
+        if prob > 99.60 and (time.time() - last_message_time) > 480:
             asyncio.create_task(send_notification())  # Create a task to send the notification
             last_message_time = time.time()
             notification_sent = True
             
-        if prob > 95.50 and (time.time() - last_log_time) > 10:
+        if prob > 95.50 and (time.time() - last_log_time) > 50:
             # Log the detection
             log_to_csv_and_sidebar(current_time, camera_id, prob, notification_sent)
             last_log_time = time.time()
