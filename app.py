@@ -90,7 +90,7 @@ async def send_notification():
             "number": headers["number"]  # Replace with your phone number
         },
         "mergeTags": {
-            "comment": f"<br>Camera_ID : 16580 <br>Probability of an accident at Kothanur, Bengaluru, Karnataka 560077.<br>Time: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time))}<br><br>For the exact location, click here: <br>https://maps.app.goo.gl/YRGv6kR9SoTik5Sa7 ",
+            "comment": f"Camera_ID : 16580 \nProbability of an accident at Kothanur, Bengaluru, Karnataka 560077.\n\nTime: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(current_time))}\n\nFor the exact location, click here: \nhttps://maps.app.goo.gl/YRGv6kR9SoTik5Sa7 ",
             "commentId": "testCommentId"
         }
     })
