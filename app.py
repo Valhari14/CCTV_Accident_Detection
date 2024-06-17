@@ -84,7 +84,7 @@ async def send_notification():
     )
 
     await notificationapi.send({
-        "notificationId": "accident_alert",
+        "notificationId": "ksp_datathon",
         "user": {
             "id": headers["email"],
             "number": headers["number"]  # Replace with your phone number
