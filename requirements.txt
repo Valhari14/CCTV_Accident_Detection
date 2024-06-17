@@ -1,0 +1,8 @@
+pandas
+keras
+numpy
+tensorflow
+streamlit
+notificationapi_python_server_sdk
+opencv-python-headless
+python-resize-image
