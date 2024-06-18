@@ -161,8 +161,9 @@ async def main():
 # Initialize a ThreadPoolExecutor
 executor = ThreadPoolExecutor()
 
-# Run the async main function
-asyncio.run(main())
+if st.sidebar.button('Start'):
+    # Run the async main function
+    asyncio.run(main())
 
 # Shut down the ThreadPoolExecutor
 executor.shutdown(wait=True)
